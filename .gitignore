@@ -8,6 +8,8 @@
 /thefuck
 /jo-nvim
 /tmux.bak
+/neofetch
+/gcloud
 
 #compiled lua sources
 luac.out
