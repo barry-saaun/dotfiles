@@ -1,3 +1,8 @@
+# Opening Apps
+shift + ctrl - h : open -a "Arc"
+shift + ctrl - j : open -a "Alacritty"
+
+
 # -- Changing Window Focus --
 
 # change window focus within space
