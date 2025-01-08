@@ -9,6 +9,7 @@ source "$CONFIG_DIR/colors.sh"
 
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
+FONT="SF Pro"
 
 ##### Bar Appearance #####
 # Configuring the general appearance of the bar.
@@ -29,8 +30,8 @@ default=(
   padding_right=5
   # icon.font="SF Pro:Semibold:15.0"
   # label.font="SF Pro:Semibold:15.0"
-  icon.font="SF Pro:Semibold:15.0"
-  label.font="SF Pro:Semibold:13.5"
+  icon.font="$FONT:Semibold:15.0"
+  label.font="$FONT:Semibold:13.5"
   icon.color=$WHITE
   label.color=$WHITE
   icon.padding_left=10
@@ -51,6 +52,7 @@ source $ITEM_DIR/spaces.sh
 source $ITEM_DIR/calender.sh
 source $ITEM_DIR/volume.sh
 source $ITEM_DIR/battery.sh
+source $ITEM_DIR/keyboard.sh
 source $ITEM_DIR/cpu.sh
 
 ##### Force all scripts to run the first time (never do this in a script) #####
