@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ICON_MAP_FN_PATH="$CONFIG_DIR/plugins/icon_map_fn.sh"
+
 if [ "$SENDER" = "space_windows_change" ]; then
   space="$(echo "$INFO" | jq -r '.space')"
   apps="$(echo "$INFO" | jq -r '.apps | keys[]')"
@@ -7,7 +9,7 @@ if [ "$SENDER" = "space_windows_change" ]; then
   icon_strip=" "
   if [ "${apps}" != "" ]; then
     while read -r app; do
-      icon_strip+=" $($CONFIG_DIR/plugins/icon_map_fn.sh "$app")"
+      icon_strip+=" $($ICON_MAP_FN_PATH "$app")"
     done <<<"${apps}"
   else
     icon_strip=" —"
