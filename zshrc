@@ -1,0 +1,54 @@
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search git fzf)
+
+source $ZSH/oh-my-zsh.sh
+
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# add brew to PATH
+export PATH=/opt/homebrew/bin:$PATH
+
+alias vim="nvim"
+alias p3="python3"
+alias ls="colorls"
+alias ll="colorls -l"
+alias gcm="git commit -m"
+# ls the file that is added or modified wihtin the last 24 hours
+alias lstd="find . -mtime 0"
+alias lzg="lazygit"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# neovim config switcher
+function nvims() {
+  items=("default" "dogvim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# Add ruby to PATH
+export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
+export PATH=$(go env GOPATH)/bin:$PATH
