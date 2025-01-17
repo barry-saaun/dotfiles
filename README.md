@@ -81,7 +81,7 @@ All the plugins can be found and inspect at [dotfiles/nvim/lazy-lock.json](https
 
 #### Statusline
 
-The tmux statusline is directly inspired by [craftzdog](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/statusline.conf). Many thanks! 🙏
+The tmux statusline is directly inspired by [craftzdog](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/statusline.conf) with slight colours modification. Many thanks! 🙏
 
 ### 🧩 Yabai
 
