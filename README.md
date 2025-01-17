@@ -59,7 +59,14 @@ brew install neovim
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 ```
 
-The plugins can be found and inspect at [dotfiles/nvim/lazy-lock.json](https://github.com/barry-saaun/dotfiles/blob/main/nvim/lazy-lock.json)
+All the plugins can be found and inspect at [dotfiles/nvim/lazy-lock.json](https://github.com/barry-saaun/dotfiles/blob/main/nvim/lazy-lock.json)
+
+#### Personal Favourite Plugins
+
+- [Harpoon2](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
+- [Telescope-file-browser](https://github.com/nvim-telescope/telescope-file-browser.nvim)
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+- [night-owl.nvim](https://github.com/oxfist/night-owl.nvim)
 
 ### 🖲️ Tmux
 
@@ -84,6 +91,6 @@ Although, Yabai has worked well for me in terms of its simplicity, due to the fa
 
 ✨ **Direct Integration with Sketchybar**, which adds extra padding to the _'menu bar'_.
 
-```
+```shell
 yabai -m config external_bar all:23:0
 ```
