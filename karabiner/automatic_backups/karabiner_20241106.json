@@ -1,0 +1,28 @@
+{
+    "profiles": [
+        {
+            "devices": [
+                {
+                    "identifiers": {
+                        "device_address": "f1-fe-cc-6d-4a-d3",
+                        "is_keyboard": true,
+                        "is_pointing_device": true
+                    },
+                    "ignore": false
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "caps_lock" },
+                    "to": [{ "key_code": "left_control" }]
+                },
+                {
+                    "from": { "key_code": "left_control" },
+                    "to": [{ "key_code": "caps_lock" }]
+                }
+            ]
+        }
+    ]
+}

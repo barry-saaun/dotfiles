@@ -1,0 +1,25 @@
+{
+  "title": "Command + Control + Esc to Backtick",
+  "rules": [
+    {
+      "description": "Map Command + Control + Esc to `",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "mandatory": ["command", "control"],
+              "optional": ["caps_lock"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "grave_accent_and_tilde"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
