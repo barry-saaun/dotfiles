@@ -39,3 +39,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Add ruby to PATH
 export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:$PATH"
 export PATH=$(go env GOPATH)/bin:$PATH
+
+# Add relevant postgresql path
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+export PGDATA=/usr/local/var/postgres
