@@ -42,6 +42,10 @@ if vim.lsp.inlay_hint then
   end, { desc = "Toggle Inlay Hint" })
 end
 
+-- scroll down/up half-page and centre the cursor
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+
 -- THESE ARE NOT NECESSARY WITH THE USE OF LAZYVIM
 -- ----------------------
 -- -- Plugin Keybinds
