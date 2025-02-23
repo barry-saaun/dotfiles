@@ -43,3 +43,11 @@ export PATH=$(go env GOPATH)/bin:$PATH
 # Add relevant postgresql path
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 export PGDATA=/usr/local/var/postgres
+
+# pnpm
+export PNPM_HOME="/Users/barry/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -10,6 +10,7 @@
 /tmux.bak
 /neofetch
 /gcloud
+/rstudio
 
 #compiled lua sources
 luac.out
