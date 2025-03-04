@@ -3,6 +3,9 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
+        "r",
+        "c",
+        "typescript",
         "gitignore",
         "graphql",
         "http",
