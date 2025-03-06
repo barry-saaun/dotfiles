@@ -1,0 +1,1 @@
+/Users/barry/Documents/obsidian_daily_backup.sh
