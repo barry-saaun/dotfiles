@@ -5,14 +5,14 @@ VAULT_PATH="/Users/barry/Documents/Obsidian Vault"
 cd "$VAULT_PATH" || exit
 
 # Check if there are any changes
-if ! git diff --quiet; then
+if ! /opt/homebrew/bin/git diff --quiet; then
 	# Add all changes to the staging area
-	git add .
+	/opt/homebrew/bin/git add .
 
 	# Commit changes only if there are staged changes
-	if ! git diff --cached --quiet; then
-		git commit -m "Daily auto backup: $(date)"
-		git push origin main
+	if ! /opt/homebrew/bin/git diff --cached --quiet; then
+		/opt/homebrew/bin/git commit -m "Daily auto backup: $(date)"
+		/opt/homebrew/bin/git push origin main
 		echo "Changes committed and pushed."
 		terminal-notifier -title "Obsidian Vault Backup Notification" -message "Changes committed and pushed."
 	else
