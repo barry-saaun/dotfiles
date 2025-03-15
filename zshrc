@@ -53,3 +53,5 @@ esac
 # pnpm end
 
 export EDITOR="nvim"
+
+export PATH="$PATH:/Users/barry/.modular/bin"
