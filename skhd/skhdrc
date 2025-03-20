@@ -1,6 +1,7 @@
 # Opening Apps
 shift + ctrl - h : open -a "Arc"
 shift + ctrl - j : open -a "Alacritty"
+shift + ctrl - o : open -a "Obsidian"
 
 
 # -- Changing Window Focus --
