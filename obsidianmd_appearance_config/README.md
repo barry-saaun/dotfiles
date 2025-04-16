@@ -16,7 +16,7 @@ The required plugins are:
 
 ## Setup
 
-Go to `Community Plugins` -> `Style Settings` -> `Import` and then paste the following config
+Go to `Community Plugins` -> `Style Settings` -> `Import` and then paste the following config or could be found at [settings.json](https://github.com/barry-saaun/dotfiles/blob/main/obsidianmd_appearance_config/settings.json)
 
 ```json
 {
