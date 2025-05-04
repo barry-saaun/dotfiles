@@ -222,7 +222,7 @@ run = 'move-node-to-workspace T' # mnemonics T - Terminal
 
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
-run = 'move-node-to-workspace B'
+run = 'move-node-to-workspace A'
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
