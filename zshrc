@@ -54,4 +54,10 @@ esac
 
 export EDITOR="nvim"
 
+# bat cli ZSH_THEME
+export BAT_THEME="gruvbox-dark"
+
+# manual page config
+export MANPAGER="sh -c 'col -bx | fmt -w $COLUMNS | bat -l man --color=always -P' | less -R"
+
 export PATH="$PATH:/Users/barry/.modular/bin"

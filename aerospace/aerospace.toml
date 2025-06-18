@@ -134,7 +134,7 @@ alt-c = 'workspace C'
 # alt-d = 'workspace D'
 # alt-e = 'workspace E'
 # alt-f = 'workspace F'
-# alt-g = 'workspace G'
+alt-g = 'workspace G'
 # alt-i = 'workspace I'
 # alt-m = 'workspace M'
 # alt-n = 'workspace N'
@@ -237,3 +237,7 @@ run = 'move-node-to-workspace O'
 [[on-window-detected]]
 if.app-id = 'ru.keepcoder.Telegram'
 run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.goodnotesapp.x'
+run = 'move-node-to-workspace G'
