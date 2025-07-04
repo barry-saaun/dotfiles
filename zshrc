@@ -12,6 +12,9 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search git fzf)
 
 source $ZSH/oh-my-zsh.sh
 
+if [ -f ~/.env ]; then
+  source ~/.env
+fi
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

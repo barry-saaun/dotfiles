@@ -12,6 +12,7 @@
 /gcloud
 /rstudio
 /btop
+/configstore
 
 #compiled lua sources
 luac.out
