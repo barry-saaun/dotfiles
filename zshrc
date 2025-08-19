@@ -58,9 +58,13 @@ esac
 export EDITOR="nvim"
 
 # bat cli ZSH_THEME
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="Monokai Extended"
 
 # manual page config
-export MANPAGER="sh -c 'col -bx | fmt -w $COLUMNS | bat -l man --color=always -P' | less -R"
+export COLUMNS
+export MANWIDTH=$COLUMNS
+export MANPAGER="sh -c 'col -bx | bat -l man --color=always -P --terminal-width $(tput cols)' | less -R"
+
+alias gd="git diff | bat --paging=never"
 
 export PATH="$PATH:/Users/barry/.modular/bin"
