@@ -1,18 +1,14 @@
-/iterm2
-/gh
-/yarn
-/lazyvim.bak
-/nvim.bak
-/raycast
-/zed
-/thefuck
-/jo-nvim
-/tmux.bak
-/neofetch
-/gcloud
-/rstudio
-/btop
-/configstore
+./iterm2/
+./gh/
+./yarn/
+./nvim.bak/
+./raycast/
+./zed/
+./thefuck/
+./neofetch/
+./rstudio/
+./btop/
+./configstore/
 
 #compiled lua sources
 luac.out
