@@ -66,5 +66,6 @@ export MANWIDTH=$COLUMNS
 export MANPAGER="sh -c 'col -bx | bat -l man --color=always -P --terminal-width $(tput cols)' | less -R"
 
 alias gd="git diff | bat --paging=never"
+alias z="zoxide"
 
 export PATH="$PATH:/Users/barry/.modular/bin"

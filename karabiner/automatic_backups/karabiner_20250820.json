@@ -93,14 +93,6 @@
                             "to": [{ "key_code": "caps_lock" }]
                         }
                     ]
-                },
-                {
-                    "identifiers": {
-                        "device_address": "f1-fe-cc-6d-21-c7",
-                        "is_keyboard": true,
-                        "is_pointing_device": true
-                    },
-                    "ignore": false
                 }
             ],
             "name": "Default profile",
