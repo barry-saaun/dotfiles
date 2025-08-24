@@ -115,19 +115,24 @@ alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-shift-minus = 'resize smart -50'
-alt-shift-equal = 'resize smart +50'
+alt-shift-ctrl-minus = 'resize smart -100'
+alt-shift-ctrl-equal = 'resize smart +100'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+
+# Use for the main monitor (Macbook Screen)
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 alt-3 = 'workspace 3'
 alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
-# alt-6 = 'workspace 6'
-# alt-7 = 'workspace 7'
-# alt-8 = 'workspace 8'
-# alt-9 = 'workspace 9'
+
+# Use for the secondary monitor (External Monitor)
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+
 alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
 # alt-b = 'workspace B'
 alt-c = 'workspace C'
@@ -215,6 +220,25 @@ down = 'volume down'
 up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
+[workspace-to-monitor-force-assignment]
+# Main monitor (MacBook screen) - workspaces 1-5 and lettered workspaces
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = 'main'
+5 = 'main'
+A = 'main'
+C = 'main'
+G = 'main'
+O = 'main'
+S = 'main'
+T = 'main'
+
+# External monitor - workspaces 6-9
+6 = 'secondary'
+7 = 'secondary'
+8 = 'secondary'
+9 = 'secondary'
 
 [[on-window-detected]]
 if.app-id = 'org.alacritty'
