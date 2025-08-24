@@ -12,15 +12,13 @@ This repository contains configuration files (**dotfiles**) used personally by m
 
 - Seamless integration with MacOS.
 - Customisations for Neovim to support advanced, yet, intuitive editing and workflow.
-- Aesthetic-focus with custom MacOS menu bar setup with Sketchybar.
 
 ## 🛠️ Tools Included
 
 - [Terminal (Alacritty)](https://alacritty.org/)
 - [Neovim](https://neovim.io/)
-- [Sketchybar](https://github.com/FelixKratz/SketchyBar)
+- [Aerospace](https://github.com/nikitabobko/AeroSpace)
 - [Tmux](https://github.com/tmux/tmux/wiki)
-- [Yabai](https://github.com/koekeishiya/yabai)
 
 ## ⚙️ Configuration Overview
 
@@ -83,14 +81,6 @@ All the plugins can be found and inspect at [dotfiles/nvim/lazy-lock.json](https
 
 The tmux statusline is directly inspired by [craftzdog](https://github.com/craftzdog/dotfiles-public/blob/master/.config/tmux/statusline.conf) with slight colours modification. Many thanks! 🙏
 
-### 🧩 Yabai
+### 🚀 Aerospace
 
-**Yabai** is a tilling window management, practically the same as i3 but for MacOS.
-
-Although, Yabai has worked well for me in terms of its simplicity, due to the fact that I have to disable the System Integrity Protection, I am considering moving to [Aerospace](https://github.com/nikitabobko/AeroSpace).
-
-✨ **Direct Integration with Sketchybar**, which adds extra padding to the _'menu bar'_.
-
-```shell
-yabai -m config external_bar all:23:0
-```
+[Aerospace](https://github.com/nikitabobko/AeroSpace) is a tiling window manager for macOS that doesn't require disabling System Integrity Protection. It's configured with a simple `.toml` file.
