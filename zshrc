@@ -69,3 +69,12 @@ alias gd="git diff | bat --paging=never"
 alias z="zoxide"
 
 export PATH="$PATH:/Users/barry/.modular/bin"
+
+export PATH="$HOME/bin:$PATH"
+
+# Shell: zsh
+echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(jenv init -)"' >> ~/.zshrc
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"

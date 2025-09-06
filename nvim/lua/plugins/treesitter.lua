@@ -17,6 +17,7 @@ return {
         "cmake",
         "cpp",
         "go",
+        "java",
       },
     },
     config = function(_, opts)

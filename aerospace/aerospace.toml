@@ -115,8 +115,8 @@ alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-shift-ctrl-minus = 'resize smart -100'
-alt-shift-ctrl-equal = 'resize smart +100'
+alt-shift-ctrl-minus = 'resize smart -50'
+alt-shift-ctrl-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 
@@ -201,11 +201,12 @@ alt-shift-semicolon = 'mode service'
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = [
   'layout floating tiling',
+  "exec-and-forget '~/bin/center-frontmost-window.jxa'",
   'mode main',
-] # Toggle between floating and tiling layout
+] # Toggle between floating and tiling layoutesc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main'] # reset layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
