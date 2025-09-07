@@ -58,10 +58,10 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 -- ----------------------
 --
 -- -- tmux navigator
--- keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>")
--- keymap.set("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>")
--- keymap.set("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>")
--- keymap.set("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>")
+keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>")
+keymap.set("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>")
+keymap.set("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>")
+keymap.set("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>")
 --
 -- -- vim-maximizer
 -- keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
