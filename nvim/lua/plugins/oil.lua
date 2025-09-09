@@ -3,6 +3,15 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   lazy = false,
   opts = {
+    columns = {
+      "permissions",
+      "mtime",
+      "size",
+      "icon",
+    },
+    lsp_file_methods = {
+      enabled = true,
+    },
     keymaps = {
       -- Navigate like Netrw / NvimTree
       ["h"] = "actions.parent",
