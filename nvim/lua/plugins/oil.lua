@@ -4,7 +4,7 @@ return {
   lazy = false,
   opts = {
     -- Show nice metadata view
-    columns = { "icon", "permissions", "size", "mtime" },
+    columns = { "permissions", "mtime", "size", "icon" },
 
     -- LSP-aware renames/moves if supported
     lsp_file_methods = { enabled = true },
