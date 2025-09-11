@@ -29,7 +29,7 @@ return {
     keymaps = {
       ["h"] = "actions.parent", -- go up dir
       ["<CR>"] = "actions.select", -- open file **or** enter dir
-      ["q"] = "actions.close", -- quit Oil
+      ["<Esc>"] = "actions.close", -- quit Oil
       ["<C-o>"] = function()
         local oil = require("oil")
         local entry = oil.get_cursor_entry()
