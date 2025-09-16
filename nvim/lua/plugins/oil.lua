@@ -23,11 +23,12 @@ return {
 
     view_options = {
       show_hidden = true, -- like `ls -a`
+      -- sorter will be injected by the config function below
     },
 
-    -- Keymaps inside Oil
+    -- Keymaps inside Oil (we'll inject the toggle below too)
     keymaps = {
-      ["h"] = "actions.parent", -- go up dir
+      ["<BS>"] = "actions.parent", -- go up dir
       ["<CR>"] = "actions.select", -- open file **or** enter dir
       ["<Esc>"] = "actions.close", -- quit Oil
       ["<C-o>"] = function()
