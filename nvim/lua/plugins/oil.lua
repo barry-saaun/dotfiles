@@ -24,6 +24,7 @@ return {
     view_options = {
       show_hidden = true, -- like `ls -a`
       -- sorter will be injected by the config function below
+      sort = { { "mtime", "desc" }, { "name", "asc" } },
     },
 
     -- Keymaps inside Oil (we'll inject the toggle below too)
@@ -31,6 +32,7 @@ return {
       ["<BS>"] = "actions.parent", -- go up dir
       ["<CR>"] = "actions.select", -- open file **or** enter dir
       ["<Esc>"] = "actions.close", -- quit Oil
+      ["gs"] = { "actions.change_sort", mode = "n" },
       ["<C-o>"] = function()
         local oil = require("oil")
         local entry = oil.get_cursor_entry()
@@ -41,6 +43,16 @@ return {
         local opener = vim.fn.has("macunix") == 1 and "open" or "xdg-open"
         vim.fn.jobstart({ opener, path }, { detach = true })
       end,
+      ["<leader>fd"] = {
+        function()
+          require("telescope.builtin").find_files({
+            cwd = require("oil").get_current_dir(),
+          })
+        end,
+        mode = "n",
+        nowait = true,
+        desc = "Find files in the current directory",
+      },
     },
   },
   config = function(_, opts)
