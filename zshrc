@@ -74,3 +74,11 @@ alias z="zoxide"
 # Plugins that must load last
 # ============================================
 source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# bun completions
+[ -s "/Users/barry/.bun/_bun" ] && source "/Users/barry/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"

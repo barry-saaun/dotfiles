@@ -10,6 +10,8 @@ neofetch/
 rstudio/
 btop/
 configstore/
+opencode/
+.opencode/
 
 # ───────────────────────────────
 # Lua / Luarocks
