@@ -10,7 +10,7 @@ fi
 # ============================================
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-plugins=(git zsh-autosuggestions web-search fzf)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search fzf)
 source $ZSH/oh-my-zsh.sh
 
 # Load p10k config
