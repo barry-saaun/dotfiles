@@ -1,9 +1,6 @@
 # Configuration Notes
 
-In a nutshell, this configuration aims for that `clean, softpaper` looks.
-
-> [!TIP]
-> This config works wonderfully for both _light_ and _dark_ mode, although, **Light Mode** is recommended.
+This config provides that clean Catppuccin look to it.
 
 ---
 
@@ -11,7 +8,7 @@ In a nutshell, this configuration aims for that `clean, softpaper` looks.
 
 The required plugins are:
 
-- [AnuPpuccin Theme](https://github.com/AnubisNekhet/AnuPpuccin)
+- [Obsidian border](https://github.com/Akifyss/obsidian-border)
 - [Style Settings](https://github.com/mgmeyers/obsidian-style-settings)
 
 ## Setup
