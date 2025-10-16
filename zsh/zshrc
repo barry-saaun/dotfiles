@@ -59,7 +59,6 @@ done
 
 # Development paths that might not always exist
 __dev_paths=(
-  "$HOME/.jenv/bin"
   "$HOME/.rvm/bin"
   "$HOME/.modular/bin"
 )
@@ -79,6 +78,7 @@ plugins=(
   git
   fzf
   web-search
+  vi-mode
 )
 
 # Load syntax highlighting and autosuggestions AFTER Oh My Zsh
@@ -89,6 +89,10 @@ fi
 
 if [[ -f "$ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
   source "$ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
+
+if [[ -f "$ZSH/custom/plugins/zsh-vi-mode/zsh-vi-mode.zsh" ]]; then
+  source "$ZSH/custom/plugins/zsh-vi-mode/zsh-vi-mode.zsh"
 fi
 
 # Bun completion (safe loading)
@@ -104,25 +108,9 @@ if type rbenv >/dev/null 2>&1; then
   eval "$(rbenv init - zsh --no-rehash 2>/dev/null)" 2>/dev/null || true
 fi
 
-# jenv - function wrapper only, no automatic init
-__jenv_wrapper() {
-  if [[ -z "${JENV_LOADED}" ]]; then
-    export JENV_LOADED=1
-    if type jenv >/dev/null 2>&1; then
-      eval "$(jenv init - 2>/dev/null)" 2>/dev/null || true
-    fi
-  fi
-  command jenv "$@"
-}
-
-# Only create alias if jenv exists
-if type jenv >/dev/null 2>&1; then
-  alias jenv='__jenv_wrapper'
-fi
-
 # ============================================
 # Safe Aliases (No Command Output During Loading)
-# =========================================###
+# ============================================
 # Editor
 alias vim="nvim"
 alias p3="python3 2>/dev/null || python"
@@ -130,6 +118,16 @@ alias p3="python3 2>/dev/null || python"
 # Git
 alias gcm="git commit -m"
 alias gd="git diff"
+alias g="git"
+alias gb="git branch"
+
+# Colorls
+if command -v colorls >/dev/null 2>&1; then
+  alias ls='colorls'
+  alias ll='colorls -lA'
+  alias la='colorls -A'       
+  alias l='colorls -l'       
+fi
 
 # Check if bat exists before using it
 if command -v bat >/dev/null 2>&1; then
@@ -145,34 +143,9 @@ else
   alias z="cd"
 fi
 
-# Directory listing with fallbacks
-__setup_ls_aliases() {
-  if command -v colorls >/dev/null 2>&1; then
-    alias ls="colorls"
-    alias ll="colorls -lA --sd"
-    alias la="colorls -A"
-  elif command -v lsd >/dev/null 2>&1; then
-    alias ls="lsd"
-    alias ll="lsd -lA --group-dirs=first"
-    alias la="lsd -A"
-  else
-    alias ls='ls -F --color=auto 2>/dev/null || ls'
-    alias ll='ls -alhF --color=auto 2>/dev/null || ls -la'
-    alias la='ls -A --color=auto 2>/dev/null || ls -a'
-  fi
-}
-
-# Setup aliases after everything else loads
-__setup_ls_aliases
-unset -f __setup_ls_aliases
-
 # File finding (safe)
 alias lstd='find . -maxdepth 1 -mtime 0 -type f 2>/dev/null || ls -lt 2>/dev/null || true'
 
-# Navigation helpers
-alias ..="cd .."
-alias ...="cd ../.."
-alias grep='grep --color=auto 2>/dev/null || grep'
 
 # ============================================
 # Safe Functions (No Startup Cost)
@@ -240,7 +213,16 @@ add-zsh-hook precmd __initial_setup
 # ============================================
 unset __safe_path_dirs __ruby_paths __dev_paths
 
+# pnpm
+export PNPM_HOME="/Users/barry/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+
 # Ensure PATH is exported
 export PATH
 
-export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"

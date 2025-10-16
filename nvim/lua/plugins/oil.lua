@@ -53,6 +53,7 @@ return {
         nowait = true,
         desc = "Find files in the current directory",
       },
+      ["p"] = "oil.move",
     },
   },
   config = function(_, opts)
