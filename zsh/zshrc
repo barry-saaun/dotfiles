@@ -243,3 +243,4 @@ unset __safe_path_dirs __ruby_paths __dev_paths
 # Ensure PATH is exported
 export PATH
 
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
