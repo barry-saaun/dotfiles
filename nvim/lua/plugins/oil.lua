@@ -33,6 +33,10 @@ return {
       ["<CR>"] = "actions.select", -- open file **or** enter dir
       ["<Esc>"] = "actions.close", -- quit Oil
       ["gs"] = { "actions.change_sort", mode = "n" },
+      ["y"] = "actions.yank_entry",
+      ["p"] = "actions.paste_from_system_clipboard",
+      ["?"] = "actions.show_help",
+      ["h"] = "actions.toggle_hidden",
       ["<C-o>"] = function()
         local oil = require("oil")
         local entry = oil.get_cursor_entry()
@@ -53,7 +57,6 @@ return {
         nowait = true,
         desc = "Find files in the current directory",
       },
-      ["p"] = "oil.move",
     },
   },
   config = function(_, opts)
