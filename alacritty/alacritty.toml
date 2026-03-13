@@ -9,7 +9,7 @@ padding.y = 10
 decorations = "buttonless"
 
 # opacity = 0.5
-opacity = 0.825
+opacity = 0.9275
 blur = true
 
 option_as_alt = "OnlyLeft"
@@ -21,4 +21,5 @@ normal = { family = "BlexMono Nerd Font Propo", style = "Medium" }
 size = 16
 
 [general]
-import = ["~/.config/alacritty/themes/night_owl.toml"]
+# import = ["~/.config/alacritty/themes/night_owl.toml"]
+import = ["~/.config/alacritty/themes/catppuccin-mocha.toml"]
