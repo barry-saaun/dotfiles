@@ -34,7 +34,6 @@ return {
       ["<Esc>"] = "actions.close", -- quit Oil
       ["gs"] = { "actions.change_sort", mode = "n" },
       ["y"] = "actions.yank_entry",
-      ["p"] = "actions.paste_from_system_clipboard",
       ["?"] = "actions.show_help",
       ["h"] = "actions.toggle_hidden",
       ["<C-o>"] = function()

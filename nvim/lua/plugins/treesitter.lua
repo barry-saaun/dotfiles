@@ -11,6 +11,7 @@ return {
       treesitter.setup({ -- enable syntax highlighting
         highlight = {
           enable = true,
+          additional_vim_regex_highlighting = false, -- correct integration with the Catppuccin theme
         },
         -- enable indentation
         indent = { enable = true },

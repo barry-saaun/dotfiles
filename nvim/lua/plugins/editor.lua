@@ -30,6 +30,10 @@ return {
   {
     "telescope.nvim",
     opts = {
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false, -- correct integration with the Catppuccin theme
+      },
       defaults = {
         file_ignore_patterns = { "node_modules", "venv", ".git" },
       },

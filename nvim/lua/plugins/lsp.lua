@@ -9,19 +9,36 @@ return {
         "shellcheck",
         "shfmt",
         "tailwindcss-language-server",
-        "typescript-language-server",
         "css-lsp",
         "bash-language-server",
       })
     end,
   },
+
   {
-    require("lspconfig").lua_ls.setup({
-      settings = {
-        Lua = {
-          inlay_hint = { enable = false },
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        ts_ls = {},
+        lua_ls = {
+          settings = {
+            Lua = {
+              inlay_hint = { enable = false },
+            },
+          },
         },
       },
-    }),
+      setup = {
+        vtsls = function()
+          return true -- skip vtsls setup
+        end,
+      },
+    },
+  },
+
+  {
+    "antosha417/nvim-lsp-file-operations",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = true,
   },
 }
