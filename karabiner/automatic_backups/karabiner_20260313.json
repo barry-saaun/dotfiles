@@ -4,19 +4,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Disable Magic Keyboard lock key",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "consumer_key_code": "al_terminal_lock_or_screensaver",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "vk_none" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Map Command + Control + Esc to `",
                         "manipulators": [
                             {
@@ -120,14 +107,6 @@
                         "device_address": "f1-fe-cc-6d-21-c6",
                         "is_keyboard": true,
                         "is_pointing_device": true
-                    },
-                    "ignore": false
-                },
-                {
-                    "identifiers": {
-                        "is_pointing_device": true,
-                        "product_id": 45098,
-                        "vendor_id": 1133
                     },
                     "ignore": false
                 }
