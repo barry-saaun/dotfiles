@@ -3,6 +3,11 @@ if [[ ":$PATH:" != *":/opt/homebrew/opt/fzf/bin:"* ]]; then
   PATH="/opt/homebrew/opt/fzf/bin${PATH:+":$PATH"}"
 fi
 
+# Set fd as the default source for fzf to skip node_modules and .next
+# Note: fd automatically respects .gitignore, so explicit excludes are extra safety
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --exclude .git --exclude node_modules --exclude .next'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # Safe fzf default options
 export FZF_DEFAULT_OPTS='
   --height 100%
@@ -21,4 +26,3 @@ __load_fzf() {
     source /opt/homebrew/opt/fzf/shell/completion.zsh
   add-zsh-hook -d precmd __load_fzf
 }
-
