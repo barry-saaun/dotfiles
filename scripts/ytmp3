@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check if at least the URL was provided
+if [ -z "$1" ]; then
+	echo "Usage: ytmp3 <youtube_url> [custom_name]"
+	exit 1
+fi
+
+URL=$1
+# If $2 is provided, use it as the filename. If not, use the video title (%(title)s)
+FILENAME=${2:-"%(title)s"}
+
+yt-dlp -x --audio-format mp3 --audio-quality 0 -o "$FILENAME.%(ext)s" "$URL"
