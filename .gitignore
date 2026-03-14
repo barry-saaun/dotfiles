@@ -12,6 +12,8 @@ btop/
 configstore/
 opencode/
 .opencode/
+cagent/
+inngest/
 
 # ───────────────────────────────
 # Lua / Luarocks
