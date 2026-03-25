@@ -127,7 +127,7 @@ _lstd_fzf_widget() {
   local file
   file=$(find . -mtime 0 -type f 2>/dev/null | fzf --preview 'file {}')
   if [ -n "$file" ]; then
-    LBUFFER+="$file"
+    LBUFFER+="${(q)file}"
     zle redisplay
   fi
 }
