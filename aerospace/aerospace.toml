@@ -254,6 +254,10 @@ if.app-id = 'net.imput.helium'
 run = 'move-node-to-workspace A'
 
 [[on-window-detected]]
+if.app-id = 'com.goodnotesapp.x'
+run = 'move-node-to-workspace G'
+
+[[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace M'
 
@@ -267,5 +271,15 @@ if.app-id = 'ru.keepcoder.Telegram'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-id = 'com.goodnotesapp.x'
-run = 'move-node-to-workspace G'
+if.app-id = 'net.whatsapp.WhatsApp'
+run = 'move-node-to-workspace 1'
+
+
+[[on-window-detected]]
+if.app-id = 'notion.mail.id'
+run = 'move-node-to-workspace 2'
+
+
+[[on-window-detected]]
+if.app-id = 'com.cron.electron'
+run = 'move-node-to-workspace 2'
