@@ -28,6 +28,30 @@ return {
     },
   },
   {
+    "lewis6991/gitsigns.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    opts = {
+      on_attach = function(bufnr)
+        vim.keymap.set("n", "<leader>hp", ":Gitsigns preview_hunk<CR>", {
+          buffer = bufnr,
+          desc = "Preview git hunk",
+        })
+        vim.keymap.set("v", "<leader>hs", ":Gitsigns stage_hunk<CR>", {
+          buffer = bufnr,
+          desc = "Stage git hunk",
+        })
+        vim.keymap.set("v", "<leader>hr", ":Gitsigns reset_hunk<CR>", {
+          buffer = bufnr,
+          desc = "Reset git hunk",
+        })
+        vim.keymap.set({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", {
+          buffer = bufnr,
+          desc = "Select git hunk",
+        })
+      end,
+    },
+  },
+  {
     "telescope.nvim",
     opts = {
       highlight = {

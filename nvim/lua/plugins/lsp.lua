@@ -19,7 +19,6 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        ts_ls = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -27,11 +26,6 @@ return {
             },
           },
         },
-      },
-      setup = {
-        vtsls = function()
-          return true -- skip vtsls setup
-        end,
       },
     },
   },

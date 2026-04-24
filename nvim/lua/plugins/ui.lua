@@ -1,12 +1,15 @@
 return {
-  { "folke/noice.nvim", enabled = false },
-
   {
     "rcarriga/nvim-notify",
     opts = {
       timeout = 5000,
     },
+    commit = "469cbf0e4876c4d2072939047b2f25ac17d1d41f",
   },
+
+  { "folke/noice.nvim", event = "VeryLazy", dependencies = {
+    "rcarriga/nvim-notify",
+  } },
 
   -- animations
   {
