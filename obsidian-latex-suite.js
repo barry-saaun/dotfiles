@@ -242,6 +242,14 @@ export default [
     replacement: "\\sum_{${0:i}=${1:1}}^{${2:N}} $3",
     options: "m",
   },
+
+  {
+    trigger: "asum",
+    replacement: "\\sum_{${0:n}=0}^{\\infty} $1",
+    options: "mA",
+    description: "Infinite series from n=0 to infinity",
+  },
+
   {
     trigger: "\\prod",
     replacement: "\\prod_{${0:i}=${1:1}}^{${2:N}} $3",
