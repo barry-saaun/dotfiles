@@ -19,6 +19,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        csharp_ls = {},
         lua_ls = {
           settings = {
             Lua = {

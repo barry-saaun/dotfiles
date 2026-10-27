@@ -275,11 +275,13 @@ if.app-id = 'net.whatsapp.WhatsApp'
 run = 'move-node-to-workspace 1'
 
 
+# Gmail PWA from helium
 [[on-window-detected]]
-if.app-id = 'notion.mail.id'
+if.app-id = 'net.imput.helium.app.fmgjjmmmlfnkbppncabfkddbjimcfncm'
 run = 'move-node-to-workspace 2'
 
 
+# Notion Calendar
 [[on-window-detected]]
 if.app-id = 'com.cron.electron'
-run = 'move-node-to-workspace 2'
+run = 'move-node-to-workspace C'
